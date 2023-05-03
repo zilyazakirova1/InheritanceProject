@@ -1,4 +1,7 @@
+package ru.netology;
+
 public class Todos {
+
 
         private Task[] tasks = new Task[0]; // <- тут будут все задачи
 
@@ -24,7 +27,7 @@ public class Todos {
          *
          * @param task Добавляемая задача
          */
-        public void add(Task task) { // <- вот здесь в параметре может лежать объект и вида SimpleTask, и вида Epic, и вида Meeting
+        public void add(Task task) { // <- вот здесь в параметре может лежать объект и вида ru.netology.SimpleTask, и вида ru.netology.Epic, и вида ru.netology.Meeting
             tasks = addToArray(tasks, task);
         }
 
@@ -32,5 +35,5 @@ public class Todos {
             return tasks;
         }
     }
-}
+
 

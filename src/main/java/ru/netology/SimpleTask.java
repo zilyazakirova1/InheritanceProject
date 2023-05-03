@@ -1,5 +1,7 @@
+package ru.netology;
+
 public class SimpleTask extends Task {
-    protected String title;
+    protected  String title;
     public SimpleTask (int id,String title) {
         super(id);
         this.title=title;
