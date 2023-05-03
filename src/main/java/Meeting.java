@@ -8,6 +8,17 @@ public class Meeting extends SimpleTask {
         this.topic=topic;
         this.project=project;
         this.start=start;
-        
+    }
+
+    public String getTopic() {
+        return topic;
+    }
+
+    public String getProject() {
+        return project;
+    }
+
+    public String getStart() {
+        return start;
     }
 }

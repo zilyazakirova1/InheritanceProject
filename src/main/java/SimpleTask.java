@@ -5,4 +5,13 @@ public class SimpleTask {
         this.id=id;
         this.title=title;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
 }
+

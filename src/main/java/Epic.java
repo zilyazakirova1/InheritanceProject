@@ -5,5 +5,7 @@ public class Epic extends SimpleTask{
         this.subtasks=subtasks;
     }
 
-
+    public String[] getSubtasks() {
+        return subtasks;
+    }
 }
