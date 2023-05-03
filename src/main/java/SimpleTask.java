@@ -1,8 +1,7 @@
-public class SimpleTask {
-    protected int id;
+public class SimpleTask extends Task {
     protected String title;
     public SimpleTask (int id,String title) {
-        this.id=id;
+        super(id);
         this.title=title;
     }
 
