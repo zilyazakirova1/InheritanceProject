@@ -20,6 +20,7 @@ public class TasksTest {
         boolean actual = simpleTask.matches("Позвонить родителям");
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldSolveIfEpicMatchesTrue() {
         String[] subtasks = {"Молоко", "Яйца", "Хлеб"};
@@ -29,6 +30,7 @@ public class TasksTest {
         boolean actual = epic.matches("Молоко");
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldSolveIfEpicMatchesFalse() {
         String[] subtasks = {"Молоко", "Яйца", "Хлеб"};
@@ -38,6 +40,7 @@ public class TasksTest {
         boolean actual = epic.matches("Огурцы");
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldSolveIfMeetingMatchesFalse() {
         Meeting meeting = new Meeting(
@@ -51,6 +54,7 @@ public class TasksTest {
         boolean actual = meeting.matches("Привет");
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldSolveIfMeetingProjectMatchesTrue() {
         Meeting meeting = new Meeting(
@@ -64,6 +68,7 @@ public class TasksTest {
         boolean actual = meeting.matches("Приложение НетоБанка");
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldSolveIfMeetingTopicMatchesTrue() {
         Meeting meeting = new Meeting(
@@ -79,8 +84,8 @@ public class TasksTest {
     }
 
     @Test
-    public void testGetterForSimpleTask(){
-        SimpleTask simpleTask=new SimpleTask(5, "Привет");
+    public void testGetterForSimpleTask() {
+        SimpleTask simpleTask = new SimpleTask(5, "Привет");
         Assertions.assertEquals("Привет", simpleTask.getTitle());
     }
 
@@ -88,9 +93,10 @@ public class TasksTest {
     public void testGetterForEpic() {
         String[] subtasks = {"Молоко", "Яйца", "Хлеб"};
         int id;
-        Epic epic = new Epic(5,subtasks);
+        Epic epic = new Epic(5, subtasks);
         Assertions.assertArrayEquals(subtasks, epic.getSubtasks());
     }
+
     @Test
     public void testGetterForMeetingTopic() {
         Meeting meeting = new Meeting(
@@ -101,6 +107,8 @@ public class TasksTest {
         );
         Assertions.assertEquals("Выкатка 3й версии приложения", meeting.getTopic());
     }
+
+    @Test
     public void newTestGetterForMeetingProject() {
         Meeting meeting = new Meeting(
                 555,
@@ -110,6 +118,8 @@ public class TasksTest {
         );
         Assertions.assertEquals("Приложение НетоБанка", meeting.getProject());
     }
+
+    @Test
     public void newTestGetterForMeetingStart() {
         Meeting meeting = new Meeting(
                 555,
@@ -119,7 +129,6 @@ public class TasksTest {
         );
         Assertions.assertEquals("Во вторник после обеда", meeting.getStart());
     }
-
 
 
 }
