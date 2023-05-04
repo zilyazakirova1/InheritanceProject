@@ -7,9 +7,9 @@ public class SimpleTask extends Task {
         this.title=title;
     }
 
-    public int getId() {
+   /* public int getId() {
         return id;
-    }
+    }*/
 
     public String getTitle() {
         return title;

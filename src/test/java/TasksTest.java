@@ -79,12 +79,50 @@ public class TasksTest {
     }
 
     @Test
-    public void test(){
+    public void testGetterForSimpleTask(){
         SimpleTask simpleTask=new SimpleTask(5, "Привет");
-        simpleTask.Id=5;
-        int e
-
+        Assertions.assertEquals("Привет", simpleTask.getTitle());
     }
+
+    @Test
+    public void testGetterForEpic() {
+        String[] subtasks = {"Молоко", "Яйца", "Хлеб"};
+        int id;
+        Epic epic = new Epic(5,subtasks);
+        Assertions.assertArrayEquals(subtasks, epic.getSubtasks());
+    }
+    @Test
+    public void testGetterForMeetingTopic() {
+        Meeting meeting = new Meeting(
+                555,
+                "Выкатка 3й версии приложения",
+                "Приложение НетоБанка",
+                "Во вторник после обеда"
+        );
+        Assertions.assertEquals("Выкатка 3й версии приложения", meeting.getTopic());
+    }
+    public void newTestGetterForMeetingProject() {
+        Meeting meeting = new Meeting(
+                555,
+                "Выкатка 3й версии приложения",
+                "Приложение НетоБанка",
+                "Во вторник после обеда"
+        );
+        Assertions.assertEquals("Приложение НетоБанка", meeting.getProject());
+    }
+    public void newTestGetterForMeetingStart() {
+        Meeting meeting = new Meeting(
+                555,
+                "Выкатка 3й версии приложения",
+                "Приложение НетоБанка",
+                "Во вторник после обеда"
+        );
+        Assertions.assertEquals("Во вторник после обеда", meeting.getStart());
+    }
+
+
+
 }
+
 
 
