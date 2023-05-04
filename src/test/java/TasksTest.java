@@ -129,6 +129,28 @@ public class TasksTest {
         );
         Assertions.assertEquals("Во вторник после обеда", meeting.getStart());
     }
+    @Test
+    public void testGetterForTaskId() {
+        Task task = new Task(5);
+
+        Assertions.assertEquals(5, task.getId());
+    }
+    @Test
+    public void shouldSolveIfTaskMatchesFalse() {
+        Task task = new Task(5);
+
+        boolean expected = false;
+        boolean actual = task.matches("test");
+        Assertions.assertEquals(expected, actual);
+    }
+//    @Test
+//    public void shouldSolveIfTaskMatchesTrue() {
+//        Task task = new Task(5);
+//
+//        boolean expected = true;
+//        boolean actual = task.matches(String.valueOf(5));
+//        Assertions.assertEquals(expected, actual);
+//    }
 
 
 }
